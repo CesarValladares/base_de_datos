@@ -11,11 +11,14 @@ const route = require ('./routes/route');
 
 //Connect to mongodb 
 //mongodb://Cesar:cesar@ds117495.mlab.com:17495/project1
-mongoose.connect('mongodb://localhost:27017/new_project');
+//connect to local 
+//'mongodb://localhost:27017/new_project'
+
+mongoose.connect('mongodb://Cesar:cesar@ds117495.mlab.com:17495/project1');
 
 //on conection 
 mongoose.connection.on('connected',()=>{
-    console.log('Connected to database mongodb @ 27017');
+    console.log('Connected to database mongodb Database');
 });
 
 mongoose.connection.on('error', (err)=>{

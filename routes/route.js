@@ -334,5 +334,57 @@ router.delete('/usuario/:id',(req, res, next)=>{
     });
 });
 
+//delete paquete
+router.delete('/paquete/:id',(req, res, next)=>{
+    Paquete.remove({_id: req.params.id}, function(err,result){
+        if (err)
+        {
+            res.json(err);
+        }
+        else
+        {
+            res.json(result);
+        }
+    });
+});
+
+//retrieving Sucursales
+router.get('/sucursales', (req,res,next)=>{
+    Sucursal.find(function(err, sucursales){
+        res.json(sucursales);
+    });
+});
+
+//add usuarios
+router.post('/sucursal', (req, res, next)=>{
+    let newScursal = new Sucursal({
+        direccion: req.body.direccion
+    });
+
+    newScursal.save((err, sucursal)=>{
+        if(err)
+        {
+            res.json({msg: 'Error al registrar sucursal'});
+        }
+        else{
+            res.json({msg: 'Sucursal registrado exitosamente'});
+        }
+    })
+});
+
+//delete sucursal
+router.delete('/sucursal/:id',(req, res, next)=>{
+    Sucursal.remove({_id: req.params.id}, function(err,result){
+        if (err)
+        {
+            res.json(err);
+        }
+        else
+        {
+            res.json(result);
+        }
+    });
+});
+
 
 module.exports = router; 
