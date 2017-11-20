@@ -9,7 +9,7 @@ import { Transporte } from '../contact';
   styleUrls: ['./transportes.component.css'],
   providers: [TransporteService]
 })
-export class TransporteComponent implements OnInit {
+export class TransportesComponent implements OnInit {
   transportes: Transporte[];
   transporte: Transporte;   
   tipo: string; 

@@ -9,7 +9,7 @@ import { Usuario } from '../contact';
   styleUrls: ['./usuarios.component.css'],
   providers: [UsuarioService]
 })
-export class UsuarioComponent implements OnInit {
+export class UsuariosComponent implements OnInit {
   usuarios: Usuario[];
   usuario: Usuario;   
   nombre: string; 
