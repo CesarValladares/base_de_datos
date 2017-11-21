@@ -145,6 +145,8 @@ router.get('/empleados', (req,res,next)=>{
 //add empleados
 router.post('/empleado', (req, res, next)=>{
     let newEmpleado = new Empleado({
+        username: req.body.username,
+        contraseña: req.body.contraseña,
         nombre: req.body.nombre,
         tipo: req.body.tipo
     });

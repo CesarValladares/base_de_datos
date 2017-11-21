@@ -37,8 +37,6 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    BrowserModule,
-    FormsModule,
     ReactiveFormsModule,
   ],
   
