@@ -14,7 +14,7 @@ const route = require ('./routes/route');
 //connect to local 
 //'mongodb://localhost:27017/new_project'
 
-mongoose.connect('mongodb://localhost:27017/new_project');
+mongoose.connect('mongodb://Cesar:cesar@ds117495.mlab.com:17495/project1');
 
 //on conection 
 mongoose.connection.on('connected',()=>{
